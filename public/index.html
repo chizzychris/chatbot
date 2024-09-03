@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <div class="flex justify-between">
+            <h1 class="text-3xl font-bold mb-5">Admin Dashboard</h1>
+            <button id="logout-button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                Logout
+            </button>
+            
+        </div>
+        <hr />
+        
+        
+        <!-- Form to add new record -->
+        <div class="mb-5">
+            <h2 class="text-2xl font-semibold mb-3">Add New Record</h2>
+            <form id="add-form" class="grid grid-cols-3 gap-4">
+                <input type="text" id="new-tag" placeholder="Tag" class="p-2 border rounded">
+                <input type="text" id="new-patterns" placeholder="Pattern  (comma-separated)" class="p-2 border rounded">
+                <input type="text" id="new-responses" placeholder="Responses (comma-separated)" class="p-2 border rounded">
+                <button type="submit" class="col-span-3 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Add Record</button>
+            </form>
+        </div>
+
+        <!-- Table to view and delete records -->
+        <table class="min-w-full bg-white">
+            <thead class="bg-gray-800 text-white">
+                <tr>
+                    <th class="w-1/4 py-3 px-4 uppercase font-semibold text-sm">Tag</th>
+                    <th class="w-1/4 py-3 px-4 uppercase font-semibold text-sm">Pattern</th>
+                    <th class="w-1/3 py-3 px-4 uppercase font-semibold text-sm">Responses</th>
+                    <th class="w-1/6 py-3 px-4 uppercase font-semibold text-sm">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="data-table">
+                <!-- Dynamic content will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

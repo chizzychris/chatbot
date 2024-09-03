@@ -1,0 +1,20 @@
+[
+  {
+    "tag": "greeting",
+    "intent": "Greeting Intent",
+    "responses": [
+      "Hello!",
+      "Hi!",
+      "Greetings!"
+    ]
+  },
+  {
+    "tag": "ask_name",
+    "intent": "What is your name?",
+    "responses": [
+      "my name is",
+      "you can call me",
+      "i am"
+    ]
+  }
+]
